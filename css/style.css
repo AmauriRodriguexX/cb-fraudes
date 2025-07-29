@@ -1,0 +1,412 @@
+/* Estructura básica */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* -------------------- */
+/* Fuentes Bree */
+/* -------------------- */
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeThin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree';
+  src: url('../assets/fonts/Bree/BreeSemibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bree Oblique';
+  src: url('../assets/fonts/Bree/BreeOblique_Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+/* -------------------- */
+/* Fuentes Inter */
+/* -------------------- */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/INTER/Inter-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+h1 {
+  font-family: 'Bree', sans-serif;
+  color: #CE0058 !important;
+  margin-bottom: 1rem;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  /* 130% */
+}
+
+h2 {
+  font-family: 'Bree', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #CE0058 !important;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+h3 {
+  font-family: 'Bree', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #CE0058 !important;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-family: 'Bree', sans-serif;
+  font-weight: 500 !important;
+  font-size: 24px;
+  color: #CE0058 !important;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 576px) {
+  h4 {
+    font-size: 28px;
+  }
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  color:#252A2D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  /* 180% */
+}
+.text-link {
+  color: #CE0058;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.color-cb {
+  color: #CE0058;
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #D8DADA;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+
+.mb-75-mobile {
+  margin-bottom: 75px;
+}
+
+@media (min-width: 576px) {
+  .mb-75-mobile {
+    margin-bottom: 0;
+  }
+}
+/* Imagen sin margen/padding y que ocupe todo el alto */
+.fraud-image {
+    object-fit: cover;
+    object-position: left;
+    border-radius: 14px 0px 0px 12px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* En mobile (hasta 767px) quitamos el border-radius */
+@media (max-width: 767px) {
+    .fraud-image {
+        border-radius: 0;
+    }
+}
+
+/* En mobile: asegura que esté pegada al top tras el navbar */
+@media (max-width: 767px) {
+    .fraud-image:first-child {
+        margin-top: 0 !important;
+    }
+}
+
+/* Fondo blanco por defecto en mobile */
+.fraud-content {
+    background-color: #ffffff;
+}
+
+/* Fondo gris solo en desktop */
+@media (min-width: 768px) {
+    .fraud-content {
+        background-color: #f6f6f6;
+        border-radius: 4px 12px 12px 4px;
+    }
+}
+
+/* Título con color institucional magenta */
+.highlight-title {
+    color: #c30067;
+    font-weight: 700;
+}
+
+/* Botón magenta con texto blanco */
+.btn-start-test {
+  background-color: #c30067;
+  color: white;
+  display: flex;
+  width: 300px;
+  height: 58px;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 80px;
+  background: #CE0058;
+}
+
+.btn-start-test:hover,
+.btn-start-test:focus {
+    background-color: #a30054;
+    color: white;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1000px;
+    }
+}
+
+/* Mobile: quitar padding lateral y superior */
+@media (max-width: 767px) {
+    .container-fraud {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+  .container-fraud {
+    min-height: 60vh;                /* Altura igual al alto de la pantalla */
+    display: flex;                    /* Activamos Flexbox */
+    align-items: center;             /* Centramos verticalmente */
+    justify-content: center;         /* Centrado horizontal extra (por si acaso) */
+  }
+}
+
+
+/* Wrapper para que el botón flote en mobile */
+@media (max-width: 767px) {
+    .start-test-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: #ffffff;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+        z-index: 999;
+    }
+
+    .btn-start-test {
+        width: 100%;
+        border-radius: 50px;
+        font-size: 1rem;
+    }
+}
+
+
+.mt-mb-75 {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+/* En mobile (máximo 767px de ancho) se anulan los márgenes */
+@media (max-width: 767px) {
+  .mt-mb-75 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+
+/* ------------------------------------------------ */
+/* MARK: SideNav mobile overlay + ocultar nav y footer    */
+/* ------------------------------------------------ */
+@media (max-width: 767px) {
+  /* El wrapper del sidenav, inicialmente fuera de pantalla */
+  .mobile-slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 10000;
+    overflow-y: auto;
+  }
+
+  /* Cuando .open, desliza al 0 */
+  .mobile-slide.open {
+    transform: translateX(0);
+  }
+
+  /* Paso-por-paso: solo el active se muestra */
+  .sidenav-inner {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .sidenav-inner.active {
+    display: block !important;
+  }
+
+  /* Oculta nav y footer cuando el sidenav está abierto */
+  body.side-open {
+    overflow: hidden;
+  }
+  body.side-open nav,
+  body.side-open footer {
+    display: none !important;
+  }
+}
+
+/* ------------------------------------------------ */
+/* En desktop no mostramos el sidenav ni steps      */
+/* ------------------------------------------------ */
+@media (min-width: 768px) {
+  .mobile-slide,
+  .sidenav-inner {
+    display: none !important;
+  }
+}
