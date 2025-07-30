@@ -334,7 +334,7 @@ p {
 
 
 .mb-75-mobile {
-  margin-bottom: 0px;
+  margin-bottom: 75px;
 }
 
 @media (min-width: 576px) {
@@ -374,6 +374,16 @@ p {
 .fraud-content {
   background-color: #f6f6f6;
 }
+
+@media (max-width: 767px) {
+    .overflow-active {
+        overflow: auto;
+        height: 90dvh;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
 
 @media (max-width: 767px) {
   .bk-white {
@@ -521,7 +531,7 @@ p {
 /* Wrapper para que el botón flote en mobile */
 @media (max-width: 767px) {
   .start-test-wrapper {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -531,7 +541,7 @@ p {
     backdrop-filter: blur(3px);
     border-radius: 60px 60px 0 0;
     padding: 1rem;
-    z-index: 999;
+    z-index: 10001;
   }
 
   .btn-start-test {
@@ -582,6 +592,8 @@ p {
     display: block;
   }
 }
+
+
 
 /* ———————————————————————
    3) Mobile (<768px): slide‑in + push (solo pasos ≠ #step-1)
