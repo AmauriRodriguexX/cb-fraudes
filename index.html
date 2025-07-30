@@ -2,212 +2,180 @@
 <html lang="es">
 
 <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-     <!-- Título de la página -->
-     <title>Mi Proyecto Web</title>
+  <!-- Título de la página -->
+  <title>Mi Proyecto Web</title>
 
-     <!-- Favicon -->
-     <link rel="icon" href="assets/resources/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/resources/favicon.ico" type="image/x-icon">
 
-     <!-- Hojas de estilo -->
-     <link rel="stylesheet" href="css/cb.min.css" />
-     <link rel="stylesheet" href="css/style.css" />
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="css/cb.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
-          <div class="container d-flex justify-content-center">
-               <a class="navbar-brand mx-auto" target="_blank" href="https://www.compartamos.com.mx/compartamos">
-                    <img src="assets/resources/logo-color.png" alt="Compartamos Banco" height="40">
-               </a>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+    <div class="container d-flex justify-content-center">
+      <a class="navbar-brand mx-auto" target="_blank" href="https://www.compartamos.com.mx/compartamos">
+        <img src="assets/resources/logo-color.png" alt="Compartamos Banco" height="40">
+      </a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- STEP 1 -->
+    <div class="step-content active" id="step-1">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <source srcset="assets/Mobile/test-fraude.jpg" media="(max-width: 767px)">
+              <img src="assets/Desktop/test-fraude.jpg" alt="Candado y seguridad digital"
+                class="img-fluid w-100 h-100 object-cover fraud-image">
+            </picture>
           </div>
-     </nav>
-
-     <main id="main-content">
-  <!-- STEP 1 (visible siempre) -->
-  <div class="container container-fraud mt-mb-75" id="step-1">
-    <div class="row gx-0">
-      <!-- Columna izquierda -->
-      <div class="col-12 col-md-6 px-0">
-        <picture>
-          <source
-            srcset="assets/Mobile/test-fraude.jpg"
-            media="(max-width: 767px)">
-          <img
-            src="assets/Desktop/test-fraude.jpg"
-            alt="Candado y seguridad digital"
-            class="img-fluid w-100 h-100 object-cover fraud-image">
-        </picture>
-      </div>
-      <!-- Columna derecha -->
-      <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-        <h1 class="text-start">
-          ¿Quieres saber cómo<br class="d-none d-md-block"> cuidarte de fraudes?
-        </h1>
-        <p class="mb-3 text-md-start">
-          Hoy en día, los fraudes pueden aparecer en cualquier momento: un mensaje inesperado,
-          una llamada sospechosa o un sitio web falso.
-        </p>
-        <p class="mb-4 text-md-start">
-          Este breve Test te ayudará a evaluar tus conocimientos. ¡Es rápido, práctico y puede
-          evitarte muchos problemas!
-        </p>
-        <div class="start-test-wrapper">
-          <a href="#" class="btn btn-start-test">Comenzar test</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 2 inline (solo DESKTOP, oculto inicialmente) -->
-  <div class="container container-fraud mt-mb-75 d-none" id="step-2">
-    <div class="row gx-0">
-      <div class="col-12 col-md-6 px-0">
-        <picture>
-          <source
-            srcset="assets/Mobile/test-fraude.jpg"
-            media="(max-width: 767px)">
-          <img
-            src="assets/Desktop/test-fraude.jpg"
-            alt="Paso 1"
-            class="img-fluid w-100 h-100 object-cover fraud-image">
-        </picture>
-      </div>
-      <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-        <h1 class="text-start">Paso 1</h1>
-        <p class="mb-3 text-md-start">
-          Recibes un mensaje de texto o WhatsApp con un enlace. ¿Qué haces?
-        </p>
-        <button class="btn btn-start-test btn-option" data-next="step-3">
-          Continuar
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 3 inline (solo DESKTOP, oculto inicialmente) -->
-  <div class="container container-fraud mt-mb-75 d-none" id="step-3">
-    <div class="row gx-0">
-      <div class="col-12 col-md-6 px-0">
-        <picture>
-          <source
-            srcset="assets/Mobile/test-fraude.jpg"
-            media="(max-width: 767px)">
-          <img
-            src="assets/Desktop/test-fraude.jpg"
-            alt="Paso 2"
-            class="img-fluid w-100 h-100 object-cover fraud-image">
-        </picture>
-      </div>
-      <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-        <h1 class="text-start">Paso 2</h1>
-        <p class="mb-3 text-md-start">
-          El número o correo del mensaje no te resulta conocido. ¿Qué haces?
-        </p>
-        <button class="btn btn-start-test btn-option" data-next="step-4">
-          Continuar
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- SIDENAV PUSH (solo MOBILE) -->
-  <div id="mobileSidenav" class="mobile-slide">
-    <!-- STEP 2 móvil -->
-    <div class="container container-fraud mt-mb-75 sidenav-inner d-none" id="step-2-mobile">
-      <div class="row gx-0">
-        <div class="col-12 col-md-6 px-0">
-          <picture>
-            <source
-              srcset="assets/Mobile/test-fraude.jpg"
-              media="(max-width: 767px)">
-            <img
-              src="assets/Desktop/test-fraude.jpg"
-              alt="Paso 1"
-              class="img-fluid w-100 h-100 object-cover fraud-image">
-          </picture>
-        </div>
-        <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-          <h1 class="text-start">Paso 1</h1>
-          <p class="mb-3 text-md-start">
-            Recibes un mensaje de texto o WhatsApp con un enlace. ¿Qué haces?
-          </p>
-          <button class="btn btn-start-test btn-option" data-next="step-3-mobile">
-            Continuar
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- STEP 3 móvil -->
-    <div class="container container-fraud mt-mb-75 sidenav-inner d-none" id="step-3-mobile">
-      <div class="row gx-0">
-        <div class="col-12 col-md-6 px-0">
-          <picture>
-            <source
-              srcset="assets/Mobile/test-fraude.jpg"
-              media="(max-width: 767px)">
-            <img
-              src="assets/Desktop/test-fraude.jpg"
-              alt="Paso 2"
-              class="img-fluid w-100 h-100 object-cover fraud-image">
-          </picture>
-        </div>
-        <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-          <h1 class="text-start">Paso 2</h1>
-          <p class="mb-3 text-md-start">
-            El número o correo del mensaje no te resulta conocido. ¿Qué haces?
-          </p>
-          <button class="btn btn-start-test btn-option" data-next="step-4-mobile">
-            Continuar
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- …duplica para los siguientes pasos móviles hasta step-11-mobile… -->
-  </div>
-</main>
-
-
-
-     <footer class="footer mt-auto">
-          <div class="container text-center pt-4 pb-3 mb-75-mobile">
-
-               <!-- Logo Compartamos Banco -->
-               <div class="mb-3 mt-3">
-                    <a href="https://www.compartamos.com.mx/compartamos" target="_blank">
-                         <img src="assets/resources/logo-color.png" alt="Compartamos Banco" height="40">
-                    </a>
-               </div>
-
-               <!-- Texto "Una empresa de Gentera" -->
-               <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap mb-1">
-                    <span class="text-muted f-14 mt-2">Una empresa de</span>
-                    <img src="assets/resources/logo-gentera.png" alt="Gentera" height="20">
-               </div>
-
-               <!-- Copyright -->
-               <div class="text-muted small mb-3">
-                    © 2025 Gentera S. A. B.
-               </div>
-
-               <!-- Enlaces -->
-               <div class="footer-links mb-3">
-                    <a href="https://www.compartamos.com.mx/compartamos/regulacion/terminos-y-condiciones"
-                         target="_blank" class="text-link">Términos y Condiciones</a>
-               </div>
-
+          <div class="col-12 bk-white col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
+            <h1 class="text-start">
+              ¿Quieres saber cómo<br class="d-none d-md-block">cuidarte de fraudes?
+            </h1>
+            <p class="mb-3 text-md-start">
+              Hoy en día, los fraudes pueden aparecer en cualquier momento: un mensaje inesperado,
+              una llamada sospechosa o un sitio web falso.
+            </p>
+            <p class="mb-4 text-md-start">
+              Este breve Test te ayudará a evaluar tus conocimientos. ¡Es rápido, práctico y puede
+              evitarte muchos problemas!
+            </p>
+            <div class="start-test-wrapper">
+              <a href="#" class="btn btn-start-test btn-option" data-next="step-2">
+                Comenzar test
+              </a>
+            </div>
           </div>
-     </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-content" id="step-2">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 1"
+                class="img-fluid w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5">
+            <!-- botón Back + título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-1">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-4">
+                <span class="fw-semibold">Avance</span>
+                <span class="fw-semibold">1/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 10%;" aria-valuenow="1"
+                  aria-valuemin="0" aria-valuemax="10"></div>
+              </div>
+            </div>
+            <div class="start-test-wrapper">
+              <a href="#" class="btn btn-start-test btn-option" data-next="step-3">
+                 Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-content" id="step-3">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <source srcset="assets/Mobile/test-fraude.jpg" media="(max-width: 767px)">
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 2"
+                class="img-fluid w-100 h-100 object-cover fraud-image">
+            </picture>
+          </div>
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
+            <h1 class="text-start">Paso 2</h1>
+            <p class="mb-3 text-md-start">
+              El número o correo del mensaje no te resulta conocido. ¿Qué haces?
+            </p>
+            <button class="btn btn-start-test btn-option" data-next="step-4">
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- … REPITE ESTE BLOQUE PARA STEP 4 A STEP 11 … -->
+    <div class="step-content" id="step-4">
+      <!-- Contenido paso 4 -->
+    </div>
+    <div class="step-content" id="step-5">
+      <!-- Contenido paso 5 -->
+    </div>
+    <!-- … -->
+    <div class="step-content" id="step-11">
+      <!-- Contenido paso 11 -->
+    </div>
+  </main>
 
 
 
-     <!-- Scripts -->
-     <script src="js/script.js"></script>
-     <script src="js/step-bystep.js"></script>
-     <script src="js/sidenavpush.js"></script>
+
+  <footer class="footer mt-auto">
+    <div class="container text-center pt-4 pb-3 mb-75-mobile">
+
+      <!-- Logo Compartamos Banco -->
+      <div class="mb-3 mt-3">
+        <a href="https://www.compartamos.com.mx/compartamos" target="_blank">
+          <img src="assets/resources/logo-color.png" alt="Compartamos Banco" height="40">
+        </a>
+      </div>
+
+      <!-- Texto "Una empresa de Gentera" -->
+      <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap mb-1">
+        <span class="text-muted f-14 mt-2">Una empresa de</span>
+        <img src="assets/resources/logo-gentera.png" alt="Gentera" height="20">
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-muted small mb-3">
+        © 2025 Gentera S. A. B.
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-links mb-3">
+        <a href="https://www.compartamos.com.mx/compartamos/regulacion/terminos-y-condiciones" target="_blank"
+          class="text-link">Términos y Condiciones</a>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/step-bystep.js"></script>
+  <script src="js/sidenavpush.js"></script>
 
 
 </body>

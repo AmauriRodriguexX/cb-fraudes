@@ -1,44 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Solo en mobile
-  if (!window.matchMedia('(max-width: 767px)').matches) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
-  const sidenav = document.getElementById('mobileSidenav');
-  const mainContent = document.getElementById('main-content');
-  const startBtn = document.querySelector('.btn-start-test');
-
-  // Comenzar test → abre step-2-mobile
-  if (startBtn) {
-    startBtn.addEventListener('click', function (e) {
+  // Avanzar
+  document.querySelectorAll('.btn-start-test, .btn-option').forEach(btn => {
+    btn.addEventListener('click', e => {
       e.preventDefault();
-      openMobileStep('step-2-mobile');
-    });
-  }
+      const curr = btn.closest('.step-content');
+      const next = document.getElementById(btn.dataset.next);
+      if (!next) return;
 
-  // Botones “Continuar” → siguiente paso móvil
-  document.querySelectorAll('.btn-option').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      openMobileStep(this.getAttribute('data-next'));
+      curr.classList.remove('active');
+      next.classList.add('active');
+
+      if (isMobile) {
+        // empuja content y oculta nav/footer
+        document.body.classList.add('side-open');
+      }
     });
   });
 
-  function openMobileStep(stepId) {
-    sidenav.classList.add('open');
-    document.body.classList.add('side-open');
-    mainContent.classList.add('mobile-pushed');
-
-    // Oculta el intro y todos los pasos
-    document.getElementById('step-1').classList.add('d-none');
-    document.querySelectorAll('.sidenav-inner').forEach(el => {
-      el.classList.add('d-none');
-      el.classList.remove('active');
+  // Retroceder (cerrar sidenav o ir al paso previo)
+  document.querySelectorAll('.btn-back').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const curr = btn.closest('.step-content');
+      const prev = document.getElementById(btn.dataset.prev);
+      curr.classList.remove('active');
+      if (prev) {
+        prev.classList.add('active');
+      }
+      if (isMobile) {
+        // si volvemos al STEP 1, quita la clase side-open
+        if (btn.dataset.prev === 'step-1') {
+          document.body.classList.remove('side-open');
+        }
+      }
     });
-
-    // Muestra solo el paso solicitado
-    const target = document.getElementById(stepId);
-    if (target) {
-      target.classList.remove('d-none');
-      target.classList.add('active');
-    }
-  }
+  });
 });

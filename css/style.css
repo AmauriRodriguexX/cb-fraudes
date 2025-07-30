@@ -195,6 +195,16 @@ p {
   line-height: 36px;
   /* 180% */
 }
+
+.text-title-back {
+  font-family: 'Inter', sans-serif;
+  color:#252A2D;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
 .text-link {
   color: #CE0058;
   font-size: 14px;
@@ -254,10 +264,18 @@ p {
     }
 }
 
+
 /* Fondo blanco por defecto en mobile */
 .fraud-content {
-    background-color: #ffffff;
+    background-color: #f6f6f6;
 }
+
+@media (max-width: 767px) {
+  .bk-white {
+    background-color: #ffffff;
+  }
+}
+
 
 /* Fondo gris solo en desktop */
 @media (min-width: 768px) {
@@ -361,37 +379,67 @@ p {
 /* ------------------------------------------------ */
 /* MARK: SideNav mobile overlay + ocultar nav y footer    */
 /* ------------------------------------------------ */
+/* ————————————————
+   Transición para empujar el contenido
+   ———————————————— */
+#main-content {
+  transition: transform 0.4s ease-in-out;
+}
+
+/* ————————————————
+   1) Todos los pasos ocultos por defecto
+   ———————————————— */
+.step-content {
+  display: none;
+}
+
+/* ————————————————
+   2) Desktop (≥768px): inline estático
+   ———————————————— */
+@media (min-width: 768px) {
+  .step-content.active {
+    display: block;
+  }
+}
+
+/* ———————————————————————
+   3) Mobile (<768px): slide‑in + push (solo pasos ≠ #step-1)
+   ——————————————————————— */
 @media (max-width: 767px) {
-  /* El wrapper del sidenav, inicialmente fuera de pantalla */
-  .mobile-slide {
+  /* El paso 1: siempre inline */
+  #step-1 {
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    height: auto;
+    transition: none;
+  }
+
+  /* Pasos 2–11: el panel que desliza */
+  .step-content:not(#step-1) {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
-    z-index: 10000;
     overflow-y: auto;
+    z-index: 10000;
   }
-
-  /* Cuando .open, desliza al 0 */
-  .mobile-slide.open {
-    transform: translateX(0);
-  }
-
-  /* Paso-por-paso: solo el active se muestra */
-  .sidenav-inner {
-    display: none;
-    width: 100%;
-    height: 100%;
-  }
-  .sidenav-inner.active {
+  /* Cuando estén activos, entran y empujan */
+  .step-content:not(#step-1).active {
     display: block !important;
   }
 
-  /* Oculta nav y footer cuando el sidenav está abierto */
+  /* Empuja el contenido principal solo cuando un paso ≥2 está activo */
+  body.side-open #main-content {
+    transform: translateX(-100%);
+  }
+
+  /* Oculta nav y footer mientras el panel está abierto */
   body.side-open {
     overflow: hidden;
   }
@@ -401,12 +449,14 @@ p {
   }
 }
 
-/* ------------------------------------------------ */
-/* En desktop no mostramos el sidenav ni steps      */
-/* ------------------------------------------------ */
-@media (min-width: 768px) {
-  .mobile-slide,
-  .sidenav-inner {
-    display: none !important;
-  }
+
+/* MARK: progressbar class */
+.progress-backrd {
+  height: 4px;
+  background-color: #FEE0EC;
+  border-radius: 8px;
+}
+
+.progress-active {
+  background-color: #CE0058;
 }
