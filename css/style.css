@@ -384,14 +384,18 @@ p {
 /* Wrapper para que el botón flote en mobile */
 @media (max-width: 767px) {
   .start-test-wrapper {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    border-top: 2px solid #EFEFEF;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(3px);
+    border-radius: 60px;
     padding: 1rem;
-    background-color: #ffffff;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
     z-index: 999;
+    margin: 0;
+    left: unset;
+    right: unset;
+    width: 100%;
   }
 
   .btn-start-test {
