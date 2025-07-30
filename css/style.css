@@ -1,8 +1,6 @@
 /* Estructura básica */
 html,
 body {
-  height: 100%;
-  overflow-x: hidden;
   margin: 0;
 
 }
@@ -603,7 +601,6 @@ p {
   /* El paso 1: siempre inline */
   #step-1 {
     display: block !important;
-    position: static !important;
     transform: none !important;
     width: 100%;
     height: auto;
@@ -629,6 +626,8 @@ p {
     display: block !important;
   }
 
+  
+
   /* Empuja el contenido principal solo cuando un paso ≥2 está activo */
   body.side-open #main-content {
     transform: translateX(-100%);
@@ -644,6 +643,8 @@ p {
     display: none !important;
   }
 }
+
+
 
 
 /* MARK: progressbar class */
