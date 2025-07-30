@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Cambia aquí al paso que quieras ver de entrada
-  const initialStepId = 'step-11';
+  const initialStepId = 'step-1';
 
   // 1) Reinicia todos los pasos: quita .active
   document.querySelectorAll('.step-content').forEach(step => {
