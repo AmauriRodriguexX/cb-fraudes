@@ -27,6 +27,7 @@
   </nav>
 
   <main id="main-content">
+
     <!-- STEP 1 -->
     <div class="step-content active" id="step-1">
       <div class="container container-fraud mt-mb-75">
@@ -40,7 +41,7 @@
           </div>
           <div class="col-12 bk-white col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
             <h1 class="text-start">
-              ¿Quieres saber cómo<br class="d-none d-md-block">cuidarte de fraudes?
+              ¿Quieres saber cómo <br class="d-none d-md-block">cuidarte de fraudes?
             </h1>
             <p class="mb-3 text-md-start">
               Hoy en día, los fraudes pueden aparecer en cualquier momento: un mensaje inesperado,
@@ -64,35 +65,76 @@
     <div class="step-content" id="step-2">
       <div class="container container-fraud mt-mb-75">
         <div class="row gx-0">
+          <!-- Columna imagen -->
           <div class="col-12 col-md-6 px-0">
             <picture>
-              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 1"
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 1"
                 class="img-fluid w-100 h-100 object-cover fraud-image d-none d-md-block">
             </picture>
           </div>
-          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5">
-            <!-- botón Back + título -->
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
             <div class="d-flex align-items-center gap-2">
               <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-1">
                 <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
               </button>
-
               <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
             </div>
-            <!-- progress bar -->
+            <!-- Progress bar -->
             <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1 mt-4">
+              <div class="d-flex justify-content-between mb-1 mt-5">
                 <span class="fw-semibold">Avance</span>
                 <span class="fw-semibold">1/10</span>
               </div>
               <div class="progress progress-backrd">
                 <div class="progress-bar progress-active" role="progressbar" style="width: 10%;" aria-valuenow="1"
-                  aria-valuemin="0" aria-valuemax="10"></div>
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
               </div>
             </div>
-            <div class="start-test-wrapper">
-              <a href="#" class="btn btn-start-test btn-option" data-next="step-3">
-                 Continuar
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              1. Recibes un mensaje de texto o WhatsApp con un enlace y te piden que actualices tus datos. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4 ">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">No lo abro y primero verifico quién lo envió</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Lo abro de inmediato, parece un mensaje oficial</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              
+            </div>
+
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Muy bien!</strong>
+              <p class="text-feedback mt-3">Verificar el remitente es el primer paso para evitar fraudes.</p>
+            </div>
+
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Cuidado!</strong>
+              <p class="text-feedback mt-3">Los delincuentes imitan mensajes oficiales. No hagas clic en enlaces sin validar su origen.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-3">
+                Continuar
               </a>
             </div>
           </div>
@@ -175,7 +217,9 @@
   <!-- Scripts -->
   <script src="js/script.js"></script>
   <script src="js/step-bystep.js"></script>
+  <script src="js/radio-buttons.js"></script>
   <script src="js/sidenavpush.js"></script>
+
 
 
 </body>

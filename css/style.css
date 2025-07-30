@@ -188,7 +188,7 @@ h4 {
 
 p {
   font-family: 'Inter', sans-serif;
-  color:#252A2D;
+  color: #252A2D;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -198,11 +198,30 @@ p {
 
 .text-title-back {
   font-family: 'Inter', sans-serif;
-  color:#252A2D;
+  color: #252A2D;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
+}
+
+.text-preguntas {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.text-feedback {
+  font-family: 'Inter', sans-serif;
+  color: #252A2D;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .text-link {
@@ -238,36 +257,37 @@ p {
     margin-bottom: 0;
   }
 }
+
 /* Imagen sin margen/padding y que ocupe todo el alto */
 .fraud-image {
-    object-fit: cover;
-    object-position: left;
-    border-radius: 14px 0px 0px 12px;
-    height: 100%;
-    width: 100%;
-    display: block;
-    margin-top: 0;
-    padding-top: 0;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 14px 0px 0px 12px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* En mobile (hasta 767px) quitamos el border-radius */
 @media (max-width: 767px) {
-    .fraud-image {
-        border-radius: 0;
-    }
+  .fraud-image {
+    border-radius: 0;
+  }
 }
 
 /* En mobile: asegura que esté pegada al top tras el navbar */
 @media (max-width: 767px) {
-    .fraud-image:first-child {
-        margin-top: 0 !important;
-    }
+  .fraud-image:first-child {
+    margin-top: 0 !important;
+  }
 }
 
 
 /* Fondo blanco por defecto en mobile */
 .fraud-content {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 @media (max-width: 767px) {
@@ -279,27 +299,25 @@ p {
 
 /* Fondo gris solo en desktop */
 @media (min-width: 768px) {
-    .fraud-content {
-        background-color: #f6f6f6;
-        border-radius: 4px 12px 12px 4px;
-    }
+  .fraud-content {
+    background-color: #f6f6f6;
+    border-radius: 4px 12px 12px 4px;
+  }
 }
 
 /* Título con color institucional magenta */
 .highlight-title {
-    color: #c30067;
-    font-weight: 700;
+  color: #c30067;
+  font-weight: 700;
 }
 
 /* Botón magenta con texto blanco */
 .btn-start-test {
-  background-color: #c30067;
+  background-color: #CE0058;
   color: white;
   display: flex;
   width: 300px;
   height: 58px;
-  font-weight: 700;
-  font-style: normal;
   font-weight: 600;
   line-height: 18px;
   justify-content: center;
@@ -307,64 +325,86 @@ p {
   gap: 4px;
   border-radius: 80px;
   background: #CE0058;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-start-test:hover,
 .btn-start-test:focus {
-    background-color: #a30054;
-    color: white;
+  background-color: #910048;
+  color: white;
 }
 
+/* Estado deshabilitado */
+.btn-start-test.disabled,
+.btn-start-test:disabled {
+  background-color: #D8DADA;
+  border-color: #D8DADA;
+  color: #949C9F; 
+  cursor: not-allowed;
+}
+
+
 @media (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1000px;
-    }
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1000px;
+  }
 }
 
 /* Mobile: quitar padding lateral y superior */
 @media (max-width: 767px) {
-    .container-fraud {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
-        margin-top: 0;
-    }
+  .container-fraud {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .container-fraud {
-    min-height: 60vh;                /* Altura igual al alto de la pantalla */
-    display: flex;                    /* Activamos Flexbox */
-    align-items: center;             /* Centramos verticalmente */
-    justify-content: center;         /* Centrado horizontal extra (por si acaso) */
+    min-height: 60vh;
+    /* Altura igual al alto de la pantalla */
+    display: flex;
+    /* Activamos Flexbox */
+    align-items: center;
+    /* Centramos verticalmente */
+    justify-content: center;
+    /* Centrado horizontal extra (por si acaso) */
   }
 }
 
 
 /* Wrapper para que el botón flote en mobile */
 @media (max-width: 767px) {
-    .start-test-wrapper {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-        background-color: #ffffff;
-        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
-        z-index: 999;
-    }
+  .start-test-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+  }
 
-    .btn-start-test {
-        width: 100%;
-        border-radius: 50px;
-        font-size: 1rem;
-    }
+  .btn-start-test {
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
 }
 
 
 .mt-mb-75 {
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 /* En mobile (máximo 767px de ancho) se anulan los márgenes */
@@ -406,6 +446,7 @@ p {
    3) Mobile (<768px): slide‑in + push (solo pasos ≠ #step-1)
    ——————————————————————— */
 @media (max-width: 767px) {
+
   /* El paso 1: siempre inline */
   #step-1 {
     display: block !important;
@@ -422,13 +463,14 @@ p {
     top: 0;
     right: 0;
     width: 100%;
-    height: 90vh;
+    height: 100dvh;
     background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
     overflow-y: auto;
     z-index: 10000;
   }
+
   /* Cuando estén activos, entran y empujan */
   .step-content:not(#step-1).active {
     display: block !important;
@@ -443,6 +485,7 @@ p {
   body.side-open {
     overflow: hidden;
   }
+
   body.side-open nav,
   body.side-open footer {
     display: none !important;
@@ -460,3 +503,81 @@ p {
 .progress-active {
   background-color: #CE0058;
 }
+
+/* MARK: radio buttons */
+
+.option-btn {
+  border-radius: 8px;
+  border: 2px solid #D8DADA;
+  background: #FFF;
+  cursor: pointer;
+  max-height: 200px;
+  min-height: 100px;
+  text-align: left;
+  margin-top: 24px;
+  transition: border 0.3s ease;
+}
+
+.option-btn.selected {
+  border-color: #CE0058;
+}
+
+.option-btn.validated {
+  border-color: #39B54D;
+  background-image: url('icons/check.png');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+}
+
+.option-btn.error {
+  border-color: #F21E11;
+  background-image: url('icons/error.png');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+}
+
+.radio-indicator {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #B0B0B0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Color magenta cuando está seleccionado */
+.option-btn.selected .radio-indicator {
+  border-color: #CE0058;
+}
+
+/* En mobile (hasta 767px), reducir el width a 20px */
+@media (max-width: 767px) {
+  .radio-indicator {
+    width: 20px;
+  }
+}
+
+
+
+.option-btn.selected .radio-circle {
+  width: 11px;
+  height: 10px;
+  background-color: #CE0058;
+  border-radius: 50%;
+}
+
+.option-btn:disabled {
+  color: #000 !important;
+}
+
+.option-btn:disabled * {
+  color: #000 !important;
+}
+
+.w-90 {
+  width: 90%;
+}
+
