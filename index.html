@@ -84,8 +84,8 @@
             <!-- Progress bar -->
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1 mt-5">
-                <span class="fw-semibold">Avance</span>
-                <span class="fw-semibold">1/10</span>
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress ">1/10</span>
               </div>
               <div class="progress progress-backrd">
                 <div class="progress-bar progress-active" role="progressbar" style="width: 10%;" aria-valuenow="1"
@@ -115,7 +115,7 @@
                   <span class="radio-indicator"><span class="radio-circle"></span></span>
                 </button>
               </div>
-              
+
             </div>
 
             <!-- Feedback correcto -->
@@ -129,7 +129,8 @@
             <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
               <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
               <strong>¡Cuidado!</strong>
-              <p class="text-feedback mt-3">Los delincuentes imitan mensajes oficiales. No hagas clic en enlaces sin validar su origen.</p>
+              <p class="text-feedback mt-3">Los delincuentes imitan mensajes oficiales. No hagas clic en enlaces sin
+                validar su origen.</p>
             </div>
             <!-- Botón Continuar / Reintentar / Siguiente -->
             <div class="start-test-wrapper d-flex justify-content-center">
@@ -146,41 +147,717 @@
     <div class="step-content" id="step-3">
       <div class="container container-fraud mt-mb-75">
         <div class="row gx-0">
+          <!-- Columna imagen -->
           <div class="col-12 col-md-6 px-0">
             <picture>
-              <source srcset="assets/Mobile/test-fraude.jpg" media="(max-width: 767px)">
-              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 2"
-                class="img-fluid w-100 h-100 object-cover fraud-image">
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 2"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
             </picture>
           </div>
-          <div class="col-12 col-md-6 fraud-content d-flex flex-column justify-content-center p-4 p-md-5">
-            <h1 class="text-start">Paso 2</h1>
-            <p class="mb-3 text-md-start">
-              El número o correo del mensaje no te resulta conocido. ¿Qué haces?
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-2">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">2/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 20%;" aria-valuenow="2"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              2. El número o correo del mensaje no te resulta conocido. ¿Qué haces?
             </p>
-            <button class="btn btn-start-test btn-option" data-next="step-4">
-              Continuar
-            </button>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Lo abro porque menciona a Compartamos Banco</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">No abro el enlace y llamo al número oficial del banco</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Excelente decisión!</strong>
+              <p class="text-feedback mt-3">Confirmar con el banco evita caer en trampas.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Alerta!</strong>
+              <p class="text-feedback mt-3">Mencionar al banco no garantiza que sea legítimo. Contacta siempre sus
+                números oficiales.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-4">
+                Continuar
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- … REPITE ESTE BLOQUE PARA STEP 4 A STEP 11 … -->
+    <!-- STEP 4 -->
     <div class="step-content" id="step-4">
-      <!-- Contenido paso 4 -->
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 3"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-3">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">3/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 30%;" aria-valuenow="3"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              3. Estás por hacer una compra en línea con tu cuenta bancaria. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Vi una promoción en redes sociales y estoy por pagar sin investigar
+                    más</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Entro a una tienda segura y reviso que tenga candado de seguridad
+                    (https://)</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Muy bien!</strong>
+              <p class="text-feedback mt-3">Comprar en sitios confiables te protege de fraudes.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Cuidado!</strong>
+              <p class="text-feedback mt-3">Las promociones falsas son una trampa común. Investiga antes de comprar.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-5">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- STEP 5 -->
     <div class="step-content" id="step-5">
-      <!-- Contenido paso 5 -->
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 4"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-4">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">4/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 40%;" aria-valuenow="4"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              4. Recibes un mensaje con un archivo o enlace sospechoso de tu banco. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Lo elimino y me comunico directamente con mi banco</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Lo descargo para ver de qué se trata</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Bien hecho!</strong>
+              <p class="text-feedback mt-3">No abras ni descargues archivos de remitentes desconocidos.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Alerta!</strong>
+              <p class="text-feedback mt-3">Podrías instalar un virus en tu teléfono. Siempre duda de archivos extraños.
+              </p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-6">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- … -->
+
+    <!-- STEP 6 -->
+    <div class="step-content" id="step-6">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 5"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-5">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">5/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 50%;" aria-valuenow="5"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              5. Estás usando una computadora pública o red Wi‑Fi gratuita. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Evito ingresar mis datos bancarios</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Ingreso mi NIP o contraseña sin preocuparme</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Perfecto!</strong>
+              <p class="text-feedback mt-3">Las redes públicas pueden ser inseguras para operaciones bancarias.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Precaución!</strong>
+              <p class="text-feedback mt-3">Evita usar redes públicas para acceder a tu banca móvil o realizar pagos.
+              </p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-7">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step-content" id="step-7">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 6"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-6">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">6/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 60%;" aria-valuenow="6"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              6. Te llama alguien diciendo que es del banco y necesita tus datos. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Le cuelgo y llamo directamente al número oficial</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Le doy mis datos porque suena urgente</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Muy bien!</strong>
+              <p class="text-feedback mt-3">Nunca compartas tus datos por teléfono si tú no iniciaste la llamada.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Cuidado!</strong>
+              <p class="text-feedback mt-3">El banco nunca te pedirá datos personales por teléfono.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-8">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 8 -->
+    <div class="step-content" id="step-8">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 7"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-7">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">7/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 70%;" aria-valuenow="7"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              7. Te piden tu NIP o número de tarjeta por teléfono. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Se los doy, parece que es del banco</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Le cuelgo y llamo directamente al número oficial</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Excelente!</strong>
+              <p class="text-feedback mt-3">Esa llamada es probablemente un intento de fraude.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Peligro!</strong>
+              <p class="text-feedback mt-3">Nadie del banco debe pedirte tu NIP ni número completo de tarjeta.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-9">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 9 -->
+    <div class="step-content" id="step-9">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 8"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-8">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">8/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 80%;" aria-valuenow="8"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              8. Escaneas un código QR que encontraste en la calle o en un folleto. ¿Qué haces?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Verifico si es oficial antes de abrirlo</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Le doy clic sin pensar, solo para ver qué dice</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Excelente!</strong>
+              <p class="text-feedback mt-3">Antes de escanear un QR, confirma siempre que provenga de una fuente
+                confiable.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Peligro!</strong>
+              <p class="text-feedback mt-3">Un QR malicioso puede redirigirte a sitios fraudulentos; verifica su origen
+                primero.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-10">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 10 -->
+    <div class="step-content" id="step-10">
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 9"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-9">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">9/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 90%;" aria-valuenow="9"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              9. ¿Desde dónde actualizas o descargas tu banca móvil?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">Desde cualquier enlace o no la actualizo seguido</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Solo desde tiendas oficiales como Play Store, App Store o App
+                    Gallery</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Perfecto!</strong>
+              <p class="text-feedback mt-3">Es la forma segura de mantener tu app protegida.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Cuidado!</strong>
+              <p class="text-feedback mt-3">Usar enlaces no verificados puede instalar apps falsas. Mantén tu app
+                actualizada desde fuentes confiables.</p>
+            </div>
+            <!-- Botón Continuar / Reintentar / Siguiente -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="step-11">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 11 -->
     <div class="step-content" id="step-11">
-      <!-- Contenido paso 11 -->
+      <div class="container container-fraud mt-mb-75">
+        <div class="row gx-0">
+          <!-- Columna imagen -->
+          <div class="col-12 col-md-6 px-0">
+            <picture>
+              <img src="assets/Desktop/test-fraude.jpg" alt="Paso 10"
+                class="w-100 h-100 object-cover fraud-image d-none d-md-block">
+            </picture>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-12 col-md-6 fraud-content d-flex flex-column p-4 p-md-5 mx-h-mn-h">
+            <!-- Back + Título -->
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn p-0 border-0 bg-transparent btn-back" data-prev="step-10">
+                <img src="assets/resources/back.png" alt="Regresar" width="32" height="32">
+              </button>
+              <h5 class="mb-0 ps-3 text-title-back">Cuídate de los fraudes</h5>
+            </div>
+            <!-- Progress bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1 mt-5">
+                <span class="text-avance-progress">Avance</span>
+                <span class="text-avance-progress">10/10</span>
+              </div>
+              <div class="progress progress-backrd">
+                <div class="progress-bar progress-active" role="progressbar" style="width: 100%;" aria-valuenow="10"
+                  aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+            </div>
+            <!-- Pregunta -->
+            <p class="text-start text-preguntas mt-4">
+              10. ¿Sabes cómo reportar un intento de fraude en Compartamos Banco?
+            </p>
+            <!-- Opciones -->
+            <div class="options-group row gx-2 mb-4">
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="false">
+                  <span class="option-text w-90">No estoy seguro</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button type="button"
+                  class="option-btn w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded"
+                  data-correct="true">
+                  <span class="option-text w-90">Sí, tengo los canales oficiales a la mano.</span>
+                  <span class="radio-indicator"><span class="radio-circle"></span></span>
+                </button>
+              </div>
+            </div>
+            <!-- Feedback correcto -->
+            <div class="feedback feedback-success text-center text-success mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/correcto.png" alt="Correcto" width="20" height="20">
+              <strong>¡Muy bien!</strong>
+              <p class="text-feedback mt-3">Llama al 800-220-9000 ó visita tu Sucursal o la Oficina de Servicio.</p>
+            </div>
+            <!-- Feedback incorrecto -->
+            <div class="feedback feedback-error text-center text-danger mb-3 mt-3" style="display:none;">
+              <img src="assets/resources/falso.png" alt="Incorrecto" width="20" height="20">
+              <strong>¡Guarda esta info!</strong>
+              <p class="text-feedback mt-3">Llama al 800-220-9000, visita tu Sucursal o entra a la Oficina de Servicio.
+                ¡Estamos para ayudarte!</p>
+            </div>
+            <!-- Botón Resultados / Reintentar / Final -->
+            <div class="start-test-wrapper d-flex justify-content-center">
+              <a href="#" class="btn btn-start-test btn-continue disabled" aria-disabled="true" data-next="results">
+                Continuar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
   </main>
-
-
-
 
   <footer class="footer mt-auto">
     <div class="container text-center pt-4 pb-3 mb-75-mobile">
