@@ -23,9 +23,12 @@ main {
 }
 
 .page-content {
-  flex: 1;        /* empuja el footer al fondo si el contenido es corto */
-  overflow: auto; /* permite scroll si el contenido se desborda */
+  flex: 1;
+  /* empuja el footer al fondo si el contenido es corto */
+  overflow: auto;
+  /* permite scroll si el contenido se desborda */
 }
+
 /* -------------------- */
 /* Fuentes Bree */
 /* -------------------- */
@@ -246,6 +249,55 @@ p {
   margin-bottom: 16px;
 }
 
+.text-logro {
+  font-family: 'Inter', sans-serif;
+  color: #252A2D;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.text-number {
+  font-family: 'Bree', sans-serif;
+  color: #CE0058;
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.text-aciertos {
+  font-family: 'Inter', sans-serif;
+  color: #5E6A71;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.title-h3 {
+  font-family: 'Bree', sans-serif !important;
+  color: #CE0058 !important;
+  font-size: 32px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 48px !important;
+}
+
+.text-ty {
+  font-family: 'Inter', sans-serif;
+  color: #252A2D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
 .option-text {
   font-family: 'Inter', sans-serif;
   color: #000;
@@ -347,10 +399,12 @@ p {
 /* Botón magenta con texto blanco */
 .btn-start-test {
   background-color: #CE0058;
+  font-family: 'Inter', sans-serif;
   color: white;
   display: flex;
   width: 300px;
   height: 58px;
+  text-decoration: none;
   font-weight: 600;
   line-height: 18px;
   justify-content: center;
@@ -373,9 +427,59 @@ p {
 .btn-start-test:disabled {
   background-color: #D8DADA;
   border-color: #D8DADA;
-  color: #949C9F; 
+  color: #949C9F;
   cursor: not-allowed;
 }
+
+
+
+.btn-outline-test {
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  color: #CE0058;
+  display: flex;
+  text-decoration: none;
+  width: 300px;
+  height: 58px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  /* 100% */
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 80px;
+  border: 2px solid #CE0058;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 767px) {
+  .btn-outline-test {
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+}
+
+.btn-outline-test:hover,
+.btn-outline-test:focus {
+  background-color: #ffffff;
+  color: #910048;
+  border-color: #910048;
+}
+
+/* Estado deshabilitado */
+.btn-outline-test.disabled,
+.btn-outline-test:disabled {
+  background-color: #fff;
+  border-color: #D8DADA;
+  color: #949C9F;
+  cursor: not-allowed;
+}
+
 
 
 @media (min-width: 1400px) {
@@ -621,6 +725,100 @@ p {
 }
 
 .w-90 {
-  width: 90%;
+  width: 80%;
 }
 
+/* MARK: felicidades html */
+
+/* Contenedor centrado y con ancho fijo solo en desktop */
+/* Contenedor general */
+.container-main {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Contenido textual con padding en mobile */
+.content-inner {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .content-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .responsive-text {
+    text-align: left;
+  }
+
+  .header-img-wrapper,
+  .no-padding-mobile {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-inner {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .responsive-text {
+    text-align: center;
+  }
+
+  .btn-start-test,
+  .btn-outline-test {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .result-box {
+    max-width: 320px;
+  }
+}
+
+/* Caja de aciertos */
+.result-box {
+  background-color: #F6F6F6;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.b-8 {
+  border-radius: 8px;
+}
+
+.mb-40 {
+  margin-bottom: 70px;
+}
+
+.mt-40 {
+  margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+  .mt-40 {
+    margin-top: 0px !important;
+  }
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+@media (max-width: 767px) {
+  .mt-32 {
+    margin-top: 0px !important;
+  }
+}
+
+.content-inner {
+  padding-top: 0rem;
+  padding-bottom: 1.5rem;
+}
