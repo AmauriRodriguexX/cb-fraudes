@@ -891,6 +891,17 @@
   <script src="js/step-bystep.js"></script>
   <script src="js/radio-buttons.js"></script>
   <script src="js/sidenavpush.js"></script>
+  <script>
+  function setRealVh() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--real-vh', `${vh}px`);
+  }
+
+  window.addEventListener('resize', setRealVh);
+  window.addEventListener('orientationchange', setRealVh);
+  setRealVh();
+</script>
+
 
 
 
