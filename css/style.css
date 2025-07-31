@@ -368,9 +368,9 @@ p {
 
 @media (max-width: 767px) {
   .overflow-active {
-    height: 100vh;               /* fallback base */
-    height: 100dvh;              /* navegadores modernos */
-    height: calc(var(--real-vh, 1vh) * 100); /* iOS con JS */
+    overflow: auto;
+    height: 90dvh;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -508,12 +508,15 @@ p {
 @media (min-width: 768px) {
   .container-fraud {
     min-height: 60vh;
+    /* Altura igual al alto de la pantalla */
     display: flex;
+    /* Activamos Flexbox */
     align-items: center;
+    /* Centramos verticalmente */
     justify-content: center;
+    /* Centrado horizontal extra (por si acaso) */
   }
 }
-
 
 
 /* Wrapper para que el botón flote en mobile */
