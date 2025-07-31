@@ -374,11 +374,11 @@ p {
 }
 
 @media (max-width: 767px) {
-    .overflow-active {
-        overflow: auto;
-        height: 90dvh;
-        -webkit-overflow-scrolling: touch;
-    }
+  .overflow-active {
+    overflow: auto;
+    height: 90dvh;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 
@@ -613,21 +613,31 @@ p {
     top: 0;
     right: 0;
     width: 100%;
+
+    /* Fallbacks progresivos */
     height: 100vh;
+    /* para navegadores antiguos */
+    height: 100dvh;
+    /* para navegadores modernos (iOS 15.4+ y Android) */
+    height: calc(var(--real-vh, 1vh) * 100);
+    /* para iOS antiguos con JS */
+
     overflow: hidden;
+    overflow-y: auto;
     background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
-    overflow-y: auto;
     z-index: 10000;
   }
+
+
 
   /* Cuando estén activos, entran y empujan */
   .step-content:not(#step-1).active {
     display: block !important;
   }
 
-  
+
 
   /* Empuja el contenido principal solo cuando un paso ≥2 está activo */
   body.side-open #main-content {

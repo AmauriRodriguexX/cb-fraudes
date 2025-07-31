@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Descubre cómo detectar fraudes en línea y llamadas que son sospechosas. Con un simple test, fortalece tu seguridad y evita caer en engaños cotidianos.">
+  <meta name="description"
+    content="Descubre cómo detectar fraudes en línea y llamadas que son sospechosas. Con un simple test, fortalece tu seguridad y evita caer en engaños cotidianos.">
   <!-- Título de la página -->
   <title>Protege tu información y evita ser víctima de fraudes</title>
 
@@ -44,10 +45,13 @@
               ¿Quieres saber cómo <br class="d-none d-md-block">cuidarte de fraudes?
             </h1>
             <p class="mb-3 text-md-start">
-              Hoy en día, los fraudes pueden aparecer en cualquier momento: un mensaje inesperado, una llamada sospechosa o un sitio web falso. Por eso, es muy importante que aprendas a identificarlos y sepas cómo actuar ante cada situación. 
+              Hoy en día, los fraudes pueden aparecer en cualquier momento: un mensaje inesperado, una llamada
+              sospechosa o un sitio web falso. Por eso, es muy importante que aprendas a identificarlos y sepas cómo
+              actuar ante cada situación.
             </p>
             <p class="mb-4 text-md-start">
-              Este breve Test te ayudará a evaluar tus conocimientos. ¡Es rápido, práctico y puede evitarte muchos problemas!
+              Este breve Test te ayudará a evaluar tus conocimientos. ¡Es rápido, práctico y puede evitarte muchos
+              problemas!
             </p>
             <div class="start-test-wrapper">
               <a href="#" class="btn btn-start-test btn-option" data-next="step-2">
@@ -892,15 +896,16 @@
   <script src="js/radio-buttons.js"></script>
   <script src="js/sidenavpush.js"></script>
   <script>
-  function setRealVh() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--real-vh', `${vh}px`);
-  }
+    function setRealVh() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--real-vh', `${vh}px`);
+    }
+    window.addEventListener('resize', setRealVh);
+    window.addEventListener('orientationchange', setRealVh);
+    setRealVh();
 
-  window.addEventListener('resize', setRealVh);
-  window.addEventListener('orientationchange', setRealVh);
-  setRealVh();
-</script>
+  </script>
+
 
 
 
