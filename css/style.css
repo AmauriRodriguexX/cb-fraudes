@@ -377,11 +377,11 @@ p {
   .overflow-active {
   overflow: auto;
   /* 1. Intentamos usar el nuevo dynamic-viewport height */
-  height: 100dvh;
+  height: 90dvh;
   /* 2. Caída en iOS Safari */
   height: -webkit-fill-available;
   /* 3. Fallback clásico que sí funciona casi en todas partes */
-  height: 100vh;
+  height: 90vh;
 
   /* para scroll “suave” en iOS */
   -webkit-overflow-scrolling: touch;
