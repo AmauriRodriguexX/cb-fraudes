@@ -18,18 +18,7 @@ main {
   width: 40px; /* mismo ancho del botón Back para equilibrar */
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-.page-content {
-  flex: 1;
-  /* empuja el footer al fondo si el contenido es corto */
-  overflow: auto;
-  /* permite scroll si el contenido se desborda */
-}
 
 /* -------------------- */
 /* Fuentes Bree */
@@ -379,9 +368,9 @@ p {
 
 @media (max-width: 767px) {
   .overflow-active {
-    overflow: auto;
-    height: 90dvh;
-    -webkit-overflow-scrolling: touch;
+    height: 100vh;               /* fallback base */
+    height: 100dvh;              /* navegadores modernos */
+    height: calc(var(--real-vh, 1vh) * 100); /* iOS con JS */
   }
 }
 
@@ -519,15 +508,12 @@ p {
 @media (min-width: 768px) {
   .container-fraud {
     min-height: 60vh;
-    /* Altura igual al alto de la pantalla */
     display: flex;
-    /* Activamos Flexbox */
     align-items: center;
-    /* Centramos verticalmente */
     justify-content: center;
-    /* Centrado horizontal extra (por si acaso) */
   }
 }
+
 
 
 /* Wrapper para que el botón flote en mobile */
@@ -544,6 +530,10 @@ p {
     border-radius: 60px 60px 0 0;
     padding: 1rem;
     z-index: 10001;
+
+    /* --- FIX AÑADIDO --- */
+    min-height: 90px; 
+    box-sizing: border-box; /* Buena práctica para asegurar que el padding se incluya correctamente */
   }
 
   .btn-start-test {
