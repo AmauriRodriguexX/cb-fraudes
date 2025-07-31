@@ -228,6 +228,13 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 767px) {
+  .text-feedback {
+    margin-bottom: 78px;
+  }
 }
 
 .text-avance-progress {
@@ -368,10 +375,18 @@ p {
 
 @media (max-width: 767px) {
   .overflow-active {
-    overflow: auto;
-    height: 90dvh;
-    -webkit-overflow-scrolling: touch;
-  }
+  overflow: auto;
+  /* 1. Intentamos usar el nuevo dynamic-viewport height */
+  height: 100dvh;
+  /* 2. Caída en iOS Safari */
+  height: -webkit-fill-available;
+  /* 3. Fallback clásico que sí funciona casi en todas partes */
+  height: 100vh;
+
+  /* para scroll “suave” en iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
 }
 
 
